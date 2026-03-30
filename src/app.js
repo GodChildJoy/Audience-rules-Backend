@@ -16,6 +16,10 @@ export function createApp() {
 
   registerRoutes(app);
 
+  app.use((req, res) => {
+    res.status(404).json({ error: 'Not found' });
+  });
+
   app.use(errorHandler);
   return app;
 }
