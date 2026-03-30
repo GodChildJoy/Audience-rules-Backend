@@ -1,0 +1,36 @@
+[
+  {
+    "id": "110d9024-6ac6-4526-b8e3-5c4a14652e2d",
+    "name": "Audience Rule 1",
+    "root": {
+      "logic": "AND",
+      "conditions": [
+        {
+          "field": "country",
+          "operator": "is",
+          "value": "e"
+        },
+        {
+          "field": "plan",
+          "operator": "is",
+          "value": "w"
+        }
+      ],
+      "groups": [
+        {
+          "logic": "AND",
+          "conditions": [
+            {
+              "field": "purchaseCount",
+              "operator": "equals",
+              "value": "2"
+            }
+          ],
+          "groups": []
+        }
+      ]
+    },
+    "savedAt": "2026-03-30T00:50:20.952Z",
+    "storedAt": "2026-03-30T00:50:20.974Z"
+  }
+]

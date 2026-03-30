@@ -1,0 +1,14 @@
+/**
+ * @param {Error & { statusCode?: number; status?: number; expose?: boolean }} err
+ * @param {import('express').Request} req
+ * @param {import('express').Response} res
+ * @param {import('express').NextFunction} next
+ */
+export function errorHandler(err, req, res, next) {
+  const status = err.statusCode ?? err.status ?? 500;
+  const message = err.expose ? err.message : status === 400 ? err.message : 'Internal server error';
+  if (status >= 500) {
+    console.error(err);
+  }
+  res.status(status).json({ error: message });
+}
