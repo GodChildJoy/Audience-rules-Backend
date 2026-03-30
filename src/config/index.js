@@ -7,5 +7,6 @@ export const config = {
   port: Number(process.env.PORT) || 3000,
   /** Path to the JSON store (project root / data) */
   rulesFilePath: path.resolve(__dirname, '../../data/audience-rules.json'),
+  audiencesFilePath: path.resolve(__dirname, '../../data/audiences.json'),
   corsOrigin: process.env.CORS_ORIGIN ?? true,
 };

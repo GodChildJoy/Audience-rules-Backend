@@ -24,9 +24,26 @@ export function parseCreateRuleBody(body) {
 }
 
 /**
+ * POST /evaluate body: `{ root: ruleGroup }`
+ * @param {unknown} body
+ * @returns {{ root: object }}
+ */
+export function parseEvaluateBody(body) {
+  if (body === null || typeof body !== 'object') {
+    throw Object.assign(new Error('Request body must be a JSON object'), { statusCode: 400, expose: true });
+  }
+  const { root } = /** @type {Record<string, unknown>} */ (body);
+  if (root === null || typeof root !== 'object') {
+    throw Object.assign(new Error('`root` is required and must be a rule group object'), { statusCode: 400, expose: true });
+  }
+  validateRuleGroup(root);
+  return { root };
+}
+
+/**
  * @param {unknown} group
  */
-function validateRuleGroup(group) {
+export function validateRuleGroup(group) {
   const g = /** @type {Record<string, unknown>} */ (group);
   if (!LOGIC.has(g.logic)) {
     throw Object.assign(new Error('Each group must have logic "AND" or "OR"'), { statusCode: 400, expose: true });

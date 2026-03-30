@@ -1,0 +1,82 @@
+[
+  {
+    "name": "Anna Schmidt",
+    "email": "anna.schmidt@example.de",
+    "country": "Germany",
+    "signupDate": "2024-06-01",
+    "purchaseCount": 5,
+    "plan": "premium"
+  },
+  {
+    "name": "Yuki Tanaka",
+    "email": "yuki.tanaka@mail.jp",
+    "country": "Japan",
+    "signupDate": "2023-05-18",
+    "purchaseCount": 52,
+    "plan": "enterprise"
+  },
+  {
+    "name": "Amelia Chen",
+    "email": "amelia.chen@northwind.io",
+    "country": "US",
+    "signupDate": "2024-03-12",
+    "purchaseCount": 3,
+    "plan": "pro"
+  },
+  {
+    "name": "Marcus Webb",
+    "email": "marcus.webb@gmail.com",
+    "country": "US",
+    "signupDate": "2025-01-08",
+    "purchaseCount": 0,
+    "plan": "free"
+  },
+  {
+    "name": "Hassan El-Masri",
+    "email": "h.elmasri@startup.io",
+    "country": "Germany",
+    "signupDate": "2024-12-05",
+    "purchaseCount": 4,
+    "plan": "pro"
+  },
+  {
+    "name": "Elena Rossi",
+    "email": "elena.rossi@luxury.it",
+    "country": "Italy",
+    "signupDate": "2023-10-15",
+    "purchaseCount": 36,
+    "plan": "premium"
+  },
+  {
+    "name": "Kenji Sato",
+    "email": "kenji.sato@vip.jp",
+    "country": "Japan",
+    "signupDate": "2025-02-28",
+    "purchaseCount": 14,
+    "plan": "premium"
+  },
+  {
+    "name": "Chloe Martin",
+    "email": "chloe.martin@design.studio",
+    "country": "Canada",
+    "signupDate": "2024-04-03",
+    "purchaseCount": 0,
+    "plan": "free"
+  },
+  {
+    "name": "Ethan Park",
+    "email": "ethan.park@fastlane.co",
+    "country": "US",
+    "signupDate": "2024-06-11",
+    "purchaseCount": 31,
+    "plan": "enterprise"
+  },
+  {
+    "name": "Nina Petrov",
+    "email": "nina.petrov@post.eu",
+    "country": "France",
+    "signupDate": "2025-01-20",
+    "purchaseCount": 2,
+    "plan": "basic"
+  }
+]

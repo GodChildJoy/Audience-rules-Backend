@@ -1,3 +1,4 @@
+import { evaluateRouter } from './evaluate.routes.js';
 import { rulesRouter } from './rules.routes.js';
 
 /**
@@ -6,4 +7,5 @@ import { rulesRouter } from './rules.routes.js';
  */
 export function registerRoutes(app) {
   app.use('/rules', rulesRouter);
+  app.use('/evaluate', evaluateRouter);
 }
