@@ -1,6 +1,6 @@
 [
   {
-    "id": "110d9024-6ac6-4526-b8e3-5c4a14652e2d",
+    "id": "627d2246-6d47-48fa-8eaf-df8ff36947c0",
     "name": "Audience Rule 1",
     "root": {
       "logic": "AND",
@@ -8,12 +8,51 @@
         {
           "field": "country",
           "operator": "is",
-          "value": "e"
+          "value": "Germany"
         },
         {
           "field": "plan",
           "operator": "is",
-          "value": "w"
+          "value": "Premium"
+        }
+      ],
+      "groups": [
+        {
+          "logic": "AND",
+          "conditions": [
+            {
+              "field": "purchaseCount",
+              "operator": "equals",
+              "value": "4"
+            },
+            {
+              "field": "signupDate",
+              "operator": "before",
+              "value": "2026-03-12"
+            }
+          ],
+          "groups": []
+        }
+      ]
+    },
+    "savedAt": "2026-03-30T01:16:51.843Z",
+    "storedAt": "2026-03-30T01:16:51.858Z"
+  },
+  {
+    "id": "6f01b4ef-d38f-4c3e-bde9-c69733a6cd24",
+    "name": "Audience Rule 3",
+    "root": {
+      "logic": "AND",
+      "conditions": [
+        {
+          "field": "country",
+          "operator": "is",
+          "value": "US"
+        },
+        {
+          "field": "plan",
+          "operator": "is",
+          "value": "Base"
         }
       ],
       "groups": [
@@ -24,13 +63,18 @@
               "field": "purchaseCount",
               "operator": "equals",
               "value": "2"
+            },
+            {
+              "field": "signupDate",
+              "operator": "before",
+              "value": "2026-03-11"
             }
           ],
           "groups": []
         }
       ]
     },
-    "savedAt": "2026-03-30T00:50:20.952Z",
-    "storedAt": "2026-03-30T00:50:20.974Z"
+    "savedAt": "2026-03-30T01:19:52.400Z",
+    "storedAt": "2026-03-30T01:19:52.409Z"
   }
 ]

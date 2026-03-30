@@ -3,6 +3,19 @@ import { parseCreateRuleBody } from '../validation/rule-payload.js';
 import * as rulesStorage from '../services/rules-storage.service.js';
 
 /**
+ * GET /rules — all stored rules (e.g. open http://localhost:3000/rules in the browser)
+ * @type {import('express').RequestHandler}
+ */
+export async function listRules(req, res, next) {
+  try {
+    const rules = await rulesStorage.readAllRules();
+    res.json(rules);
+  } catch (err) {
+    next(err);
+  }
+}
+
+/**
  * POST /rules — append a new rule to audience-rules.json
  * @type {import('express').RequestHandler}
  */
@@ -18,6 +31,28 @@ export async function createRule(req, res, next) {
     };
     await rulesStorage.appendRule(record);
     res.status(201).json(record);
+  } catch (err) {
+    next(err);
+  }
+}
+
+/**
+ * DELETE /rules/:id — remove one rule from audience-rules.json
+ * @type {import('express').RequestHandler}
+ */
+export async function deleteRule(req, res, next) {
+  try {
+    const id = req.params.id;
+    if (!id || typeof id !== 'string') {
+      res.status(400).json({ error: 'Rule id is required.' });
+      return;
+    }
+    const deleted = await rulesStorage.deleteRuleById(id);
+    if (!deleted) {
+      res.status(404).json({ error: 'Rule not found.' });
+      return;
+    }
+    res.status(204).send();
   } catch (err) {
     next(err);
   }

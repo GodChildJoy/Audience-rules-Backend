@@ -30,3 +30,18 @@ export async function appendRule(ruleRecord) {
   await fs.writeFile(config.rulesFilePath, json, 'utf8');
   return ruleRecord;
 }
+
+/**
+ * @param {string} id
+ * @returns {Promise<boolean>} true if a rule was removed
+ */
+export async function deleteRuleById(id) {
+  const rules = await readAllRules();
+  const next = rules.filter((r) => r.id !== id);
+  if (next.length === rules.length) {
+    return false;
+  }
+  const json = `${JSON.stringify(next, null, 2)}\n`;
+  await fs.writeFile(config.rulesFilePath, json, 'utf8');
+  return true;
+}
