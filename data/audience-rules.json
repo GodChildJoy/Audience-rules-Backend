@@ -1,14 +1,14 @@
 [
   {
-    "id": "cb40f2eb-f7c5-4d82-bf65-30e2bf4f0127",
-    "name": "Audience Rule 1",
+    "id": "102f2b6b-432d-4bf2-9e05-65a61cb0bd96",
+    "name": "Audience Rule 88271d8e-1d3f-4ab7-a8e0-d65f85dab6c8",
     "root": {
       "logic": "AND",
       "conditions": [
         {
           "field": "country",
           "operator": "is",
-          "value": "US"
+          "value": "Italy"
         },
         {
           "field": "plan",
@@ -18,48 +18,36 @@
       ],
       "groups": [
         {
-          "logic": "AND",
+          "logic": "OR",
           "conditions": [
             {
               "field": "purchaseCount",
               "operator": "greater than",
-              "value": "5"
+              "value": "3"
             }
           ],
-          "groups": [
-            {
-              "logic": "AND",
-              "conditions": [
-                {
-                  "field": "signupDate",
-                  "operator": "before",
-                  "value": "2026-02-26"
-                }
-              ],
-              "groups": []
-            }
-          ]
+          "groups": []
         }
       ]
     },
-    "savedAt": "2026-03-30T02:36:19.084Z",
-    "storedAt": "2026-03-30T02:36:19.108Z"
+    "savedAt": "2026-03-30T03:09:38.264Z",
+    "storedAt": "2026-03-30T03:09:38.275Z"
   },
   {
-    "id": "1ab364f1-07f4-43b8-bf4b-335e16653aed",
-    "name": "Audience Rule 2",
+    "id": "aa38fda6-05d2-4ebc-ade5-7a6935a522e2",
+    "name": "Audience Rule 2b568592-2b6f-4fb6-a1f1-23bd498177c1",
     "root": {
       "logic": "AND",
       "conditions": [
         {
           "field": "country",
           "operator": "is",
-          "value": "US"
+          "value": "Japan"
         },
         {
           "field": "plan",
           "operator": "is",
-          "value": "premium"
+          "value": "free"
         }
       ],
       "groups": [
@@ -72,161 +60,11 @@
               "value": "5"
             }
           ],
-          "groups": [
-            {
-              "logic": "AND",
-              "conditions": [
-                {
-                  "field": "signupDate",
-                  "operator": "before",
-                  "value": "2026-02-26"
-                }
-              ],
-              "groups": []
-            }
-          ]
+          "groups": []
         }
       ]
     },
-    "savedAt": "2026-03-30T02:36:40.980Z",
-    "storedAt": "2026-03-30T02:36:40.986Z"
-  },
-  {
-    "id": "9cd4b5e4-87be-43e2-9e00-89809c5d5570",
-    "name": "Audience Rule 3",
-    "root": {
-      "logic": "AND",
-      "conditions": [
-        {
-          "field": "country",
-          "operator": "is",
-          "value": "US"
-        },
-        {
-          "field": "plan",
-          "operator": "is",
-          "value": "premium"
-        }
-      ],
-      "groups": [
-        {
-          "logic": "AND",
-          "conditions": [
-            {
-              "field": "purchaseCount",
-              "operator": "greater than",
-              "value": "5"
-            }
-          ],
-          "groups": [
-            {
-              "logic": "AND",
-              "conditions": [
-                {
-                  "field": "signupDate",
-                  "operator": "before",
-                  "value": "2026-02-26"
-                }
-              ],
-              "groups": []
-            }
-          ]
-        }
-      ]
-    },
-    "savedAt": "2026-03-30T02:36:41.161Z",
-    "storedAt": "2026-03-30T02:36:41.166Z"
-  },
-  {
-    "id": "ed9dc9dd-c1d8-4ee5-954f-42877528cae9",
-    "name": "Audience Rule 4",
-    "root": {
-      "logic": "AND",
-      "conditions": [
-        {
-          "field": "country",
-          "operator": "is",
-          "value": "US"
-        },
-        {
-          "field": "plan",
-          "operator": "is",
-          "value": "premium"
-        }
-      ],
-      "groups": [
-        {
-          "logic": "AND",
-          "conditions": [
-            {
-              "field": "purchaseCount",
-              "operator": "greater than",
-              "value": "5"
-            }
-          ],
-          "groups": [
-            {
-              "logic": "AND",
-              "conditions": [
-                {
-                  "field": "signupDate",
-                  "operator": "before",
-                  "value": "2026-02-26"
-                }
-              ],
-              "groups": []
-            }
-          ]
-        }
-      ]
-    },
-    "savedAt": "2026-03-30T02:36:41.342Z",
-    "storedAt": "2026-03-30T02:36:41.347Z"
-  },
-  {
-    "id": "5de3c310-92a8-4b79-b0e8-86cde262c201",
-    "name": "Audience Rule 5",
-    "root": {
-      "logic": "AND",
-      "conditions": [
-        {
-          "field": "country",
-          "operator": "is",
-          "value": "US"
-        },
-        {
-          "field": "plan",
-          "operator": "is",
-          "value": "premium"
-        }
-      ],
-      "groups": [
-        {
-          "logic": "AND",
-          "conditions": [
-            {
-              "field": "purchaseCount",
-              "operator": "greater than",
-              "value": "5"
-            }
-          ],
-          "groups": [
-            {
-              "logic": "AND",
-              "conditions": [
-                {
-                  "field": "signupDate",
-                  "operator": "before",
-                  "value": "2026-02-26"
-                }
-              ],
-              "groups": []
-            }
-          ]
-        }
-      ]
-    },
-    "savedAt": "2026-03-30T02:36:41.537Z",
-    "storedAt": "2026-03-30T02:36:41.543Z"
+    "savedAt": "2026-03-30T03:16:36.848Z",
+    "storedAt": "2026-03-30T03:16:36.854Z"
   }
 ]
