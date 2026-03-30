@@ -1,4 +1,3 @@
-import { parseEvaluateBody } from '../validation/rule-payload.js';
 import * as audiencesStorage from '../services/audiences-storage.service.js';
 import { evaluateGroup } from '../services/rule-evaluator.service.js';
 
@@ -8,7 +7,7 @@ import { evaluateGroup } from '../services/rule-evaluator.service.js';
  */
 export async function evaluateAudienceRule(req, res, next) {
   try {
-    const { root } = parseEvaluateBody(req.body);
+    const { root } = req.validatedBody;
     const audiences = await audiencesStorage.readAllAudiences();
     const matches = [];
     for (const a of audiences) {

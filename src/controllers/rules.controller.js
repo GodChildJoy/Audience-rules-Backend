@@ -1,5 +1,4 @@
 import crypto from 'node:crypto';
-import { parseCreateRuleBody } from '../validation/rule-payload.js';
 import * as rulesStorage from '../services/rules-storage.service.js';
 
 /**
@@ -21,7 +20,7 @@ export async function listRules(req, res, next) {
  */
 export async function createRule(req, res, next) {
   try {
-    const { name, root, savedAt } = parseCreateRuleBody(req.body);
+    const { name, root, savedAt } = req.validatedBody;
     const record = {
       id: crypto.randomUUID(),
       name,
@@ -43,10 +42,6 @@ export async function createRule(req, res, next) {
 export async function deleteRule(req, res, next) {
   try {
     const id = req.params.id;
-    if (!id || typeof id !== 'string') {
-      res.status(400).json({ error: 'Rule id is required.' });
-      return;
-    }
     const deleted = await rulesStorage.deleteRuleById(id);
     if (!deleted) {
       res.status(404).json({ error: 'Rule not found.' });
